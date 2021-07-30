@@ -22,7 +22,7 @@ body {
       line-height: 20px;
       max-width: 390px;
       margin: 15px auto 0;
-      color: $textDefault;
+      color: darkgrey;
     }
   }
 
@@ -41,7 +41,7 @@ body {
     font-family: $font-alt;
     font-weight: 400;
     font-size: 22px;
-    color: mix($textDefault, #000);
+    color: gainsboro;
 
     span {
       color: $textSuccess

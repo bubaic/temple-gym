@@ -10,8 +10,10 @@
   }
 
   .bg { fill: $bg }
-  .body { fill: $textSuccess }
-  .flame { animation: burn 150ms infinite ease-in-out alternate }
+  .tip { fill: black }
+  .body { fill: #ff7056 }
+  .circle, .exhaust, .fins { fill: darkturquoise }
+  .flame { fill: #fbc034; animation: burn 150ms infinite ease-in-out alternate }
   .smoke { animation: smoke 150ms infinite ease-in-out alternate }
   .exhaust__line { animation: exhaust 150ms infinite ease-in-out alternate }
 }
