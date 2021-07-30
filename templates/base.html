@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+	<!--	meta -->
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+	<!-- links -->
+	<link as="style" href="{% static 'css/style.css' %}" rel="prefetch stylesheet">
+	{% block links %}{% endblock %}
+
+	<!-- title -->
+	<title>TempleGym &ndash; {% block title %}{% endblock %}</title>
+</head>
+<body>
+<noscript>
+	<strong>
+		We're sorry but TempleGym doesn't work properly without JavaScript enabled. Please enable it to
+		continue.
+	</strong>
+</noscript>
+
+{% block body %}{% endblock %}
+</body>
+</html>

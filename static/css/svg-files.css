@@ -1,0 +1,51 @@
+/* rocket launch animations */
+@keyframes burn {
+  0% {
+    transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);
+  }
+  100% {
+    transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);
+  }
+}
+@keyframes smoke {
+  0% {
+    transform: translate(-2px, -30px);
+  }
+  100% {
+    transform: translate(2px, -30px);
+  }
+}
+@keyframes exhaust {
+  0% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+.figure {
+  margin-top: 80px;
+  height: 220px;
+}
+.figure__animation {
+  height: 100%;
+}
+.figure .bg {
+  fill: #263238;
+}
+.figure .body {
+  fill: #21b17a;
+}
+.figure .flame {
+  animation: burn 150ms infinite ease-in-out alternate;
+}
+.figure .smoke {
+  animation: smoke 150ms infinite ease-in-out alternate;
+}
+.figure .exhaust__line {
+  animation: exhaust 150ms infinite ease-in-out alternate;
+}
+
+/*# sourceMappingURL=svg-files.css.map */

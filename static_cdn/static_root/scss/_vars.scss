@@ -1,0 +1,24 @@
+// COLOURS
+$bg: #263238;
+
+$textDefault: #888;
+$textSuccess: lighten(#19865C, 10%);
+
+$green: #21b17a;
+$gray: lightgray;
+
+
+// fonts
+$font-default: 'nimbus sans', sans-serif;
+$font-alt: 'google sans';
+
+
+// others
+$space: 0.5em;
+
+%flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space;
+}

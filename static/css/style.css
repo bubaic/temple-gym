@@ -1,0 +1,114 @@
+body .mostly-ready, body .partially-ready, body .on-maintenance, body .working-on, body .others, body footer .option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #263238;
+  letter-spacing: 0.02vmin;
+  overflow-x: hidden;
+  font-family: "nimbus sans", sans-serif;
+}
+body main {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+body main p {
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 390px;
+  margin: 15px auto 0;
+  color: #888;
+}
+body p {
+  text-transform: lowercase;
+}
+body p:first-letter {
+  text-transform: capitalize;
+}
+body h2 {
+  max-width: 500px;
+  margin: -30px auto 0;
+  padding: 0;
+  font-family: "google sans";
+  font-weight: 400;
+  font-size: 22px;
+  color: #444444;
+}
+body h2 span {
+  color: #21b17a;
+}
+body footer {
+  position: relative;
+  margin: calc(1rem * 15 / 4) auto 1rem;
+  width: 83.33%;
+  border-top: 1px solid #7a7a7a;
+  padding-top: 2em;
+  flex-wrap: wrap;
+}
+body footer .option {
+  flex-direction: column;
+  float: right;
+  padding: 0.5em;
+  background: #c8d4de;
+  border-radius: 4px;
+}
+body footer .option h4 {
+  color: #19865C;
+  font-size: 16px;
+}
+body footer .option p, body footer .option span {
+  font-weight: 300;
+  font-size: 12px;
+  padding-top: 3px;
+  color: #424242;
+}
+body footer .option.info h4 {
+  color: #3333ff;
+}
+body .replacer {
+  margin: 4rem auto;
+  background: #a1d8aa;
+  padding: 1rem;
+  width: 50%;
+}
+body .replacer p {
+  color: #2f4537;
+}
+body .replacer p code {
+  background: #21b17a;
+}
+body code {
+  background: #bbbbbb;
+  padding: 0.25rem;
+  color: whitesmoke;
+  border-radius: 4px;
+}
+body footer .header {
+  color: #e0e0e0bf;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
+}
+body .mostly-ready, body .partially-ready, body .on-maintenance, body .working-on, body .others {
+  text-align: center;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  body .replacer {
+    width: 83.33%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

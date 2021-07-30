@@ -1,0 +1,132 @@
+@import './vars';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg;
+  letter-spacing: 0.02vmin;
+  overflow-x: hidden;
+  font-family: $font-default;
+
+  main {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 390px;
+      margin: 15px auto 0;
+      color: $textDefault;
+    }
+  }
+
+  p {
+    text-transform: lowercase;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  h2 {
+    max-width: 500px;
+    margin: -30px auto 0;
+    padding: 0;
+    font-family: $font-alt;
+    font-weight: 400;
+    font-size: 22px;
+    color: mix($textDefault, #000);
+
+    span {
+      color: $textSuccess
+    }
+  }
+
+  footer {
+    position: relative;
+    margin: calc(1rem * 15 / 4) auto 1rem;
+    width: 83.33%;
+    border-top: 1px solid darken($gray, 35%);
+    padding-top: $space * 4;
+    flex-wrap: wrap;
+
+    .option {
+      @extend %flex-row-center;
+      flex-direction: column;
+      float: right;
+      padding: $space;
+      background: #c8d4de;
+      border-radius: 4px;
+
+      h4 {
+        color: #19865C;
+        font-size: 16px;
+      }
+
+      p, span {
+        font-weight: 300;
+        font-size: 12px;
+        padding-top: 3px;
+        color: darken(#757575, 20%);
+      }
+    }
+
+    .option.info {
+      h4 {
+        color: lighten(blue, 10%);
+      }
+    }
+  }
+
+  .replacer {
+    margin: 4rem auto;
+    background: mix(whitesmoke, #4dbb5f);
+    padding: 1rem;
+    width: 50%;
+
+    p {
+      color: #2f4537;
+
+      code {
+        background: #21b17a
+      }
+    }
+  }
+
+  code {
+    background: #bbbbbb;
+    padding: 0.25rem;
+    color: whitesmoke;
+    border-radius: 4px
+  }
+
+
+  footer {
+    .header {
+      color: #e0e0e0bf;
+      display: grid;
+      place-items: center;
+      margin-bottom: $space;
+      text-transform: capitalize;
+    }
+  }
+
+  .mostly-ready, .partially-ready, .on-maintenance, .working-on, .others {
+    @extend %flex-row-center;
+    text-align: center;
+    margin-bottom: $space * 2;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 639px) {
+    .replacer {
+      width: 83.33%;
+    }
+  }
+}

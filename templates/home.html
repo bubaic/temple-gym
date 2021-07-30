@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block links %}
+		<link as="style" href="{% static 'css/svg-files.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+		<main>
+				{% include 'partials/rocket.html' %}
+				<h2><span>Success:</span> it worked!</h2>
+				<p>You are seeing this page because URL(s) are configured this way.</p>
+		</main>
+
+		<footer>
+				{% include 'partials/temporary_links.html' %}
+		</footer>
+		<div class="replacer">
+				<p>please note:</p>
+				<p>
+						on completion, this page will be replaced by: <code>homepage</code>,
+						and information page(s) will be no longer there
+				</p>
+		</div>
+{% endblock %}
