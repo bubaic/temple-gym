@@ -1,25 +1,27 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 
 {% block links %}
-		<link as="style" href="{% static 'css/svg-files.css' %}" rel="stylesheet">
+		<link as="style" href="{% static 'css/svg-files.css' %}" rel="prefetch stylesheet">
 {% endblock %}
 
 {% block title %}Home{% endblock %}
 
 {% block body %}
+		<div style="margin: 2rem auto; width: 80%; height: auto; background: #f3f3f3">
+
+		</div>
 		<main>
 				{% include 'partials/rocket.html' %}
-				<h2><span>Success:</span> it worked!</h2>
-				<p>You are seeing this page because URL(s) are configured this way.</p>
+				<h2>Uptime <span>{{ info }}</span></h2>
+				<p>This page gets updated frequently, page content may differ from time-to-time.</p>
 		</main>
 
 		<footer>
 				{% include 'partials/temporary_links.html' %}
 		</footer>
 		<div class="replacer">
-				<p>please note:</p>
 				<p>
 						on completion, this page will be replaced by: <code>homepage</code>,
 						and information page(s) will be no longer there

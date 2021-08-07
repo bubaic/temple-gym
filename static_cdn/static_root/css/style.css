@@ -27,7 +27,7 @@ body main p {
   line-height: 20px;
   max-width: 390px;
   margin: 15px auto 0;
-  color: #888;
+  color: darkgrey;
 }
 body p {
   text-transform: lowercase;
@@ -42,7 +42,7 @@ body h2 {
   font-family: "google sans";
   font-weight: 400;
   font-size: 22px;
-  color: #444444;
+  color: gainsboro;
 }
 body h2 span {
   color: #21b17a;
@@ -66,6 +66,9 @@ body footer .option h4 {
   color: #19865C;
   font-size: 16px;
 }
+body footer .option h6 {
+  color: #3333ff;
+}
 body footer .option p, body footer .option span {
   font-weight: 300;
   font-size: 12px;
@@ -74,6 +77,13 @@ body footer .option p, body footer .option span {
 }
 body footer .option.info h4 {
   color: #3333ff;
+}
+body footer .header {
+  color: #e0e0e0bf;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.5em;
+  text-transform: capitalize;
 }
 body .replacer {
   margin: 4rem auto;
@@ -93,15 +103,9 @@ body code {
   color: whitesmoke;
   border-radius: 4px;
 }
-body footer .header {
-  color: #e0e0e0bf;
-  display: grid;
-  place-items: center;
-  margin-bottom: 0.5em;
-  text-transform: capitalize;
-}
 body .mostly-ready, body .partially-ready, body .on-maintenance, body .working-on, body .others {
   text-align: center;
+  align-items: flex-start;
   margin-bottom: 1em;
   flex-wrap: wrap;
 }

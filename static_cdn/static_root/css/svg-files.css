@@ -35,10 +35,17 @@
 .figure .bg {
   fill: #263238;
 }
+.figure .tip {
+  fill: black;
+}
 .figure .body {
-  fill: #21b17a;
+  fill: #ff7056;
+}
+.figure .circle, .figure .exhaust, .figure .fins {
+  fill: darkturquoise;
 }
 .figure .flame {
+  fill: #fbc034;
   animation: burn 150ms infinite ease-in-out alternate;
 }
 .figure .smoke {

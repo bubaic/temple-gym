@@ -22,7 +22,7 @@ body {
       line-height: 20px;
       max-width: 390px;
       margin: 15px auto 0;
-      color: $textDefault;
+      color: darkgrey;
     }
   }
 
@@ -41,7 +41,7 @@ body {
     font-family: $font-alt;
     font-weight: 400;
     font-size: 22px;
-    color: mix($textDefault, #000);
+    color: gainsboro;
 
     span {
       color: $textSuccess
@@ -69,6 +69,10 @@ body {
         font-size: 16px;
       }
 
+      h6 {
+        color: #3333ff;
+      }
+
       p, span {
         font-weight: 300;
         font-size: 12px;
@@ -77,10 +81,16 @@ body {
       }
     }
 
-    .option.info {
-      h4 {
-        color: lighten(blue, 10%);
-      }
+    .option.info h4 {
+      color: lighten(blue, 10%);
+    }
+
+    .header {
+      color: #e0e0e0bf;
+      display: grid;
+      place-items: center;
+      margin-bottom: $space;
+      text-transform: capitalize;
     }
   }
 
@@ -107,19 +117,10 @@ body {
   }
 
 
-  footer {
-    .header {
-      color: #e0e0e0bf;
-      display: grid;
-      place-items: center;
-      margin-bottom: $space;
-      text-transform: capitalize;
-    }
-  }
-
   .mostly-ready, .partially-ready, .on-maintenance, .working-on, .others {
     @extend %flex-row-center;
     text-align: center;
+    align-items: flex-start;
     margin-bottom: $space * 2;
     flex-wrap: wrap;
   }

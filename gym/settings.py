@@ -11,6 +11,7 @@ SECRET_KEY = 'k6bp(epmr(bak9yihxb%2g6cr^t3@sg!de)asywhgy!t^-1%!z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '0.0.0.0']
+AUTH_USER_MODEL = 'account.User'
 
 # Application definition
 INSTALLED_APPS = [
@@ -61,7 +62,7 @@ WSGI_APPLICATION = 'gym.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': BASE_DIR / 'db.sqlite3',
+		'NAME': BASE_DIR / 'gym.sqlite3',
 	}
 }
 
