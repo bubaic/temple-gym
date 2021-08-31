@@ -11,6 +11,8 @@ djangorestframework = "==3.12.2"
 gunicorn = "==19.9.0"
 pytz = "==2020.5"
 sqlparse = "==0.4.1"
+djangorestframework-simplejwt = "*"
+djoser = "*"
 
 [dev-packages]
 

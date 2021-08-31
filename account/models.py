@@ -28,8 +28,8 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-	email = models.EmailField(verbose_name='Email Address', max_length=255, unique=True, db_index=True)
-	username = models.CharField(verbose_name='Username', max_length=255, unique=True, db_index=True)
+	email = models.EmailField(max_length=255, unique=True, db_index=True)
+	username = models.CharField(max_length=255, unique=True, db_index=True)
 	is_verified = models.BooleanField(default=False)
 	is_active = models.BooleanField(default=True)
 	staff = models.BooleanField(default=False)

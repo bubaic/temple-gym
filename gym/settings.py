@@ -22,13 +22,26 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 
+	# rest_framework plugins
+	'rest_framework',
+	'rest_framework.authtoken',
+	'corsheaders',
+	'djoser',
+
 	# apps
 	'account'
+]
+
+CORS_ALLOWED_ORIGINS = [
+	'htto://localhost:8080',
+	# before deployment we`ve to add
+	# domain urls to this list
 ]
 
 MIDDLEWARE = [
 	'django.middleware.security.SecurityMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
+	'corsheaders.middleware.CorsMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -70,7 +83,8 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
 	{
-		'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+		'NAME': 'django.contrib.auth.password_validation'
+		        '.UserAttributeSimilarityValidator',
 	},
 	{
 		'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -98,3 +112,11 @@ STATICFILES_DIRS = [
 	path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = path.join(BASE_DIR, 'static_cdn', 'static_root')
+
+# DRF specific
+REST_FRAMEWORK = {
+	'NON_FIELD_ERRORS_KEY': 'error',
+	'DEFAULT_AUTHENTICATION_CLASSES': [
+		'rest_framework_simplejwt.authentication.JWTAuthentication'
+	]
+}

@@ -8,8 +8,12 @@ from .views import index
 urlpatterns = [
 	path('', index, name='homepage'),
 	# path('home/', index, name='homepage'),
-	path('admin/', admin.site.urls),
 	path('accounts/', include('account.urls')),
+	path('admin/', admin.site.urls),
+	
+	# custom `djoser` urls
+	path('api/v1/', include('djoser.urls')),
+	path('api/v1/', include('djoser.urls.authtoken')),
 ]
 
 if settings.DEBUG:
