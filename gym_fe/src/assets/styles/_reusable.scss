@@ -1,0 +1,59 @@
+@import "./vars";
+
+// ----------------- //
+// re-usable classes //
+// ----------------- //
+%errGradient {
+  background: linear-gradient(137.5deg, $error 25%, #e02151 50%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+%textGradient {
+  background: linear-gradient(137.5deg, $primary, $secondary);
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+}
+%trans {
+  /* default transition property */
+  transition: all #{$speed}ms ease;
+}
+
+%flexColumn {
+  /* flexed column */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@layer base {
+  %flexRow {
+    /* flexed rows */
+    @apply flex flex-row items-center;
+  }
+  
+  .contain {
+    /* customized container */
+    @apply container mx-auto relative;
+  }
+
+  .atMobile {
+    @apply px-4 sm:px-2;
+  }
+
+  .card-wrapper {
+    @apply gap-6;
+  }
+
+  // contact details
+  .contact-details {
+    @extend %flexColumn;
+    @apply items-start gap-2 font-pt;
+
+    span {
+      @extend %flexRow;
+      @apply capitalize text-gray-600 gap-2;
+    }
+  }
+}

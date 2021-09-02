@@ -1,0 +1,60 @@
+// all animations
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// animation: overlay grow
+@keyframes grow {
+  0% {
+    height: 56px;
+  }
+  50% {
+    background: linear-gradient(0deg, #1e1e1ebf, transparent);
+  }
+  75% {
+    background: linear-gradient(0deg, #1e1e1eb3, transparent);
+  }
+  100% {
+    height: 160px;
+    background: linear-gradient(0deg, #1e1e1ea6, transparent);
+  }
+}
+@media screen and (max-width: 640px) {
+  @keyframes grow {
+    0% {
+      height: 56px;
+    }
+    50% {
+      background: linear-gradient(0deg, #1e1e1ebf, transparent);
+    }
+    75% {
+      background: linear-gradient(0deg, #1e1e1eb3, transparent);
+    }
+    100% {
+      height: 100px;
+      background: linear-gradient(0deg, #1e1e1ea6, transparent);
+    }
+  }
+}
+
+@keyframes spin-left {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: left 30px;
+  }
+}
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: right 21px;
+  }
+}

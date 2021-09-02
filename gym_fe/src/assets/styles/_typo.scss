@@ -1,0 +1,31 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* default h1 */
+    @apply font-bold font-poppins tracking-wide capitalize;
+  }
+
+  a,
+  b,
+  caption,
+  em,
+  p,
+  input,
+  label,
+  li,
+  span,
+  strong {
+    /* default paragraph */
+    @apply font-pt;
+  }
+
+  caption,
+  b,
+  strong {
+    @apply font-bold;
+  }
+}

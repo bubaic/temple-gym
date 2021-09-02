@@ -1,0 +1,38 @@
+// forms layout
+@layer base {
+  .form-control {
+    @extend %flexColumn;
+    @apply items-start;
+
+    label,
+    input {
+      @apply tracking-wider;
+    }
+
+    label {
+      @apply text-gray-400 font-bold capitalize;
+    }
+
+    input,
+    select,
+    textarea {
+      @extend %trans;
+      @apply ring-1 ring-gray-200 outline-none \
+        rounded px-2 h-8 w-full mt-1 mb-2 text-gray-700;
+
+      &:hover,
+      &:active,
+      &:focus {
+        @apply ring-brand-secondary;
+      }
+
+      &::placeholder {
+        @apply opacity-80 capitalize;
+      }
+    }
+
+    textarea {
+      @apply h-20 py-1;
+    }
+  }
+}

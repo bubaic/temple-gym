@@ -1,0 +1,39 @@
+@import "./vars";
+
+%callToAction {
+  background: $brand-gradient;
+  color: $white;
+}
+
+@layer base {
+  .default {
+    @apply px-4 py-2 font-poppins text-sm font-semibold \
+      shadow-md hover:shadow-lg relative rounded-full;
+
+    transition: all #{$speed * 2}ms ease;
+  }
+
+  .square {
+    @extend .default;
+    @apply rounded;
+  }
+
+  .btn {
+    @extend %callToAction, .default;
+  }
+
+  // square button animation
+  .sqrBtnAnime {
+    &::before {
+      content: "";
+      transition: all #{$speed + 50}ms ease;
+      @apply absolute w-0 h-full top-0 left-0 rounded \
+        bg-brand-primary;
+    }
+
+    &:active::before,
+    &:hover::before {
+      @apply w-full;
+    }
+  }
+}

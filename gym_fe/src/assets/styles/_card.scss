@@ -1,0 +1,49 @@
+@import "./reusable";
+
+@layer base {
+  .card {
+    @extend %trans;
+    @apply w-full mx-auto gap-5;
+
+    &--img {
+      @apply w-full h-full;
+    }
+
+    &--body {
+      @apply text-center;
+    }
+    &--body,
+    &--contents {
+      .title {
+        @apply font-pt uppercase text-gray-700 font-bold text-lg \
+        leading-none;
+      }
+      .desc {
+        @apply text-gray-400 my-2 leading-tight font-poppins;
+        max-width: 60ch;
+      }
+    }
+
+    .link {
+      @extend %flexRow;
+      @apply justify-center;
+
+      span {
+        @apply font-poppins text-gray-600 font-semibold capitalize text-xs;
+      }
+      .fa-icon {
+        @extend %trans;
+        @apply relative right-0;
+      }
+
+      &:hover {
+        span {
+          @apply underline;
+        }
+        .fa-icon {
+          @apply -right-1;
+        }
+      }
+    }
+  }
+}

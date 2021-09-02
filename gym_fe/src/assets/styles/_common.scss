@@ -1,0 +1,46 @@
+@import "./reusable";
+
+/************************
+  line breaks cutomized 
+*************************/
+br {
+  content: "";
+  margin: 0.75em;
+  display: block;
+  font-size: 25%;
+}
+
+// home screen
+@layer base {
+  .section {
+    .header {
+      h1 {
+        @apply text-2xl sm:text-3xl lg:text-4xl \
+          font-bold opacity-80 tracking-tight;
+      }
+    }
+  }
+
+  .section#benefits,
+  .section#trainers {
+    .header {
+      @extend %flexRow;
+      @apply justify-between;
+
+      .link {
+        @apply text-brand-secondary relative leading-none;
+        @extend %flexRow;
+
+        .fa-icon {
+          @extend %trans;
+          @apply -right-px top-px relative;
+        } /* .fa-icon */
+        &:hover {
+          .fa-icon {
+            @apply -right-1;
+          }
+        } /* &:hover */
+      } /* .link */
+    } /* .header */
+  }
+}
