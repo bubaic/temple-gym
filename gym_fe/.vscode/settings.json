@@ -1,7 +1,6 @@
 {
-    // "editor.fontFamily": "'fixedsys excelsior','ligconsolata'",
     "editor.fontFamily": "'fixedsys excelsior','ligconsolata'",
     "editor.fontSize": 15,
     "editor.fontWeight": "400",
-    "editor.lineHeight": 1.25
+    "editor.lineHeight": 1.25,
 }

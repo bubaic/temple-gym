@@ -1,90 +1,93 @@
 <template>
-  <div id="sideBar" class="sidebar">
-    <div class="flex flex-col">
-      <!-- sidebar toggle -->
-      <div class="text-right hidden md:block mb-4">
-        <button id="sideBarHideBtn">
-          <i class="fad fa-times-circle"></i>
-        </button>
-      </div>
-      <!-- end sidebar toggle -->
+  <div class="sidebar" v-if="isOpen">
+    <div class="wrapper">
+      <span class="brand">temple gym</span>
 
-      <p class="sidebar__head">homes</p>
+      <p class="sidebar__head">dashboards</p>
       <a href="./index.html" class="sidebar__link">
-        <i class="fad fa-chart-pie text-xs mr-2"></i>
-        Analytics dashboard
+        <i class="fad fa-chart-pie"></i>
+        <span>analytics</span>
       </a>
 
       <a href="./index-1.html" class="sidebar__link">
         <i class="fad fa-shopping-cart text-xs mr-2"></i>
-        ecommerce dashboard
+        <span>shop</span>
       </a>
 
       <p class="sidebar__head">apps</p>
       <a href="#" class="sidebar__link">
-        <i class="fad fa-envelope-open-text text-xs mr-2"></i>
-        email
+        <i class="fad fa-envelope-open-text"></i>
+        <span>email</span>
       </a>
-
-      <!-- link -->
-      <a href="#" class="sidebar__link">
-        <i class="fad fa-comments text-xs mr-2"></i>
-        chat
-      </a>
-      <!-- end link -->
-
-      <!-- link -->
-      <a href="#" class="sidebar__link">
-        <i class="fad fa-shield-check text-xs mr-2"></i>
-        todo
-      </a>
-      <!-- end link -->
 
       <a href="#" class="sidebar__link">
-        <i class="fad fa-calendar-edit text-xs mr-2"></i>
-        calendar
+        <i class="fad fa-comments"></i>
+        <span>chat</span>
       </a>
-      <!-- end link -->
 
-      <!-- link -->
+      <a href="#" class="sidebar__link">
+        <i class="fad fa-shield-check"></i>
+        <span>todo</span>
+      </a>
+
+      <a href="#" class="sidebar__link">
+        <i class="fad fa-calendar-edit"></i>
+        <span>calendar</span>
+      </a>
+
       <p class="sidebar__head">reports</p>
       <a href="#" class="sidebar__link">
-        <i class="fad fa-file-invoice-dollar text-xs mr-2"></i>
-        invoice
+        <i class="fad fa-file-invoice-dollar"></i>
+        <span>invoice</span>
       </a>
-      <!-- end link -->
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+  export default {
+    name: "sidebar",
+    props: ["isOpen"],
+  };
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/reusable";
+  @import "@/assets/styles/reusable";
 
-@layer base {
-  .sidebar {
-    @extend %flexColumn, %trans;
-    @apply relative flex-wrap w-52 flex-none p-5
-      md:fixed md:top-0 md:z-30 md:h-screen md:shadow-xl
-			border-r border-gray-300 bg-light-500;
-    // md:-ml-64 ;
+  @layer base {
+    .wrapper {
+      @extend %flexColumn;
+      align-items: start !important;
 
-    &__head {
-      @apply uppercase text-xs text-gray-600 mb-4
-				font-poppins font-semibold tracking-wider;
-
-      &:not(:first-child) {
-        @apply mt-4;
+      .brand {
+        @apply font-poppins font-bold capitalize text-lg mb-4 text-gray-700;
       }
     }
-    &__link {
+
+    .sidebar {
       @extend %trans;
-      @apply mb-2 capitalize font-medium text-sm
-				text-blue-gray-700 hover:text-brand-primary;
+      @apply relative flex-wrap w-52 flex-none p-5 overflow-y-scroll
+        md:fixed md:top-0 md:z-30 md:h-screen md:shadow-xl
+			  border-r border-gray-300 bg-light-500;
+      // md:-ml-64 ;
+
+      &__head {
+        @apply uppercase text-xs text-blue-gray-400 mb-4
+				font-poppins font-semibold tracking-wider;
+
+        &:not(:first-child) {
+          @apply mt-4;
+        }
+      }
+      &__link {
+        @extend %trans;
+        @apply mb-2 capitalize font-medium text-sm
+				text-gray-600 hover:text-brand-primary;
+      }
+    }
+
+    .fad {
+      @apply text-xs mr-2 relative -top-px;
     }
   }
-}
 </style>
