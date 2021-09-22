@@ -22,38 +22,38 @@
 
 %flexColumn {
   /* flexed column */
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @apply flex flex-col items-center;
 }
 
-@layer base {
-  %flexRow {
-    /* flexed rows */
-    @apply flex flex-row items-center;
-  }
-  
-  .contain {
-    /* customized container */
-    @apply container mx-auto relative;
-  }
+%flexRow {
+  /* flexed rows */
+  @apply flex flex-row items-center;
+}
 
-  .atMobile {
-    @apply px-4 sm:px-2;
-  }
+%flexInline {
+  @apply inline-flex items-center justify-center;
+}
 
-  .card-wrapper {
-    @apply gap-6;
-  }
+.contain {
+  /* customized container */
+  @apply container mx-auto relative;
+}
 
-  // contact details
-  .contact-details {
-    @extend %flexColumn;
-    @apply items-start gap-2 font-pt;
+.atMobile {
+  @apply px-4 sm:px-2;
+}
 
-    span {
-      @extend %flexRow;
-      @apply capitalize text-gray-600 gap-2;
-    }
+.card-wrapper {
+  @apply gap-6;
+}
+
+// contact details
+.contact-details {
+  @extend %flexColumn;
+  @apply items-start gap-2 font-pt;
+
+  span {
+    @extend %flexRow;
+    @apply capitalize text-gray-600 gap-2;
   }
 }

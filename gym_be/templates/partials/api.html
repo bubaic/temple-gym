@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}List of APIs{%endblock %}
+
+{% block style %}
+	body h2 {
+		max-width: auto;
+		margin: 30px auto -1rem;
+		font-weight: 400;
+	}
+	.option h4 {
+		font-family: "ibm plex mono";
+		font-weight: 500;
+	}
+	.option p {
+		max-width: 20ch;
+	}
+{% endblock %}
+
+{% block body %}
+	<h2>List of apis here</h2>
+
+	<footer>
+		<div class="partially-ready">
+			<a href="http://localhost:8000/api/v1?format=json">
+				<div class="option">
+					<h4>/api/v<sup>1</sup></h4>
+					<p>api home</p>
+				</div>
+			</a>
+
+			<a href="http://localhost:8000/api/v1/product/categories">
+				<div class="option">
+					<h4>categories</h4>
+					<p>list of different categories available</p>
+				</div>
+			</a>
+
+			<a href="http://localhost:8000/api/v1/product/all">
+				<div class="option">
+					<h4>all products</h4>
+					<p>lists of products</p>
+				</div>
+			</a>
+
+			<a href="http://localhost:8000/api/v1/feedbacks">
+				<div class="option">
+					<h4>feedbacks</h4>
+					<p>feedbacked messsages from multiple users</p>
+				</div>
+			</a>
+		</div>
+	</footer>
+{% endblock %}
