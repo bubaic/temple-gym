@@ -5,7 +5,7 @@ import windicss from "vite-plugin-windicss";
 
 export default defineConfig({
   plugins: [vue(), windicss()],
-  server: { port: 8080 },
+  server: { port: 3000 },
   resolve: {
     alias: [{ find: "@", replacement: resolve(__dirname, "src") }],
   },
