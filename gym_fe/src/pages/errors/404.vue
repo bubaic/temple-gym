@@ -2,11 +2,13 @@
   <section class="section">
     <div class="row">
       <img :src="img404" alt="not found" />
-      <h1>404</h1>
-      <p>
-        Sorry, but the page you're looking for can't be found or no longer
-        exists. Please go back to <RouterLink to="/">homepage.</RouterLink>
-      </p>
+      <div class="details">
+        <h1>404</h1>
+        <p>
+          Sorry, but the page you're looking for can't be found or no longer
+          exists. Please go back to <RouterLink to="/">homepage.</RouterLink>
+        </p>
+      </div>
     </div>
   </section>
 </template>
@@ -34,18 +36,30 @@
       @apply w-auto h-1/2 object-cover rounded-sm shadow-md;
     }
 
-    h1 {
-      @extend %errGradient;
-      @apply text-3xl md:text-4xl xl:text-5xl font-poppins
-				font-bold mt-6 mb-2 leading-none;
-    }
+    .details {
+      @extend %flexRow;
+      @apply items-center justify-center divide-x divide-warm-gray-300
+        max-w-prose my-5;
 
-    p {
-      @apply text-sm md:text-lg leading-snug tracking-wider
-				text-center text-warm-gray-500 font-pt;
+      h1,
+      p {
+        @apply p-2;
+      }
 
-      a {
-        @apply text-light-blue-600;
+      h1 {
+        @extend %errGradient;
+        @apply text-3xl lg:text-4xl font-poppins
+				font-bold leading-none;
+      }
+
+      p {
+        @apply text-sm md:text-base leading-tight tracking-wider
+				 text-blue-gray-500 font-pt <sm:w-60;
+        font-family: "syne";
+
+        a {
+          @apply text-light-blue-600;
+        }
       }
     }
   }
