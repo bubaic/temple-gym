@@ -29,12 +29,6 @@ class SerializeRegister(ModelSerializer):
 
 
 class SerializeListUser(ModelSerializer):
-	username = SerializerMethodField(read_only=True)
-
 	class Meta:
 		model = User
-		fields = ['id', 'email', 'username', 'is_verified', 'is_active']
-
-	# @staticmethod
-	def get_username(self, obj):
-		return obj
+		fields = '__all__'
