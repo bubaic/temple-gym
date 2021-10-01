@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     # apps (alphabetical order)
     'account',
     'feedback',
+    'membership',
+    'offer',
     'product',
 ]
 
@@ -119,9 +121,9 @@ MEDIA_ROOT = path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # DRF specific
-REST_FRAMEWORK = {
-    'NON_FIELD_ERRORS_KEY': 'error',
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication'
-    ]
-}
+# REST_FRAMEWORK = {
+#     'NON_FIELD_ERRORS_KEY': 'error',
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework_simplejwt.authentication.JWTAuthentication'
+#     ]
+# }

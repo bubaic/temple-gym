@@ -1,6 +1,10 @@
 {
-    "editor.fontFamily": "'fixedsys excelsior','ligconsolata'",
-    "editor.fontSize": 15,
-    "editor.fontWeight": "400",
-    "editor.lineHeight": 1.25,
+    // "editor.fontFamily": "'lotion'",
+    // "editor.fontFamily": "'fixedsys excelsior'",
+    "editor.fontFamily": "'ligconsolata'",
+    "editor.fontSize": 14.575,
+    "editor.fontWeight": "700",
+    "editor.lineHeight": 1.125,
+    "prettier.vueIndentScriptAndStyle": true,
+    "vetur.experimental.templateInterpolationService": true
 }
