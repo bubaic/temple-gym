@@ -29,6 +29,6 @@ export default {
 
 <style lang="scss" scoped>
 .show {
-  @apply block;
+  @apply block mt-1;
 }
 </style>

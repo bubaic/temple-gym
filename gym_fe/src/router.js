@@ -18,18 +18,14 @@ const router = createRouter({
     /* dashboard */
     {
       path: "/dashboard",
-      component: () => import("@/pages/admin/Dashboard.vue"),
+      component: () => import("@/pages/dashboard/Dashboard.vue"),
     },
 
     /* company */
     { path: "/", component: () => import("@/pages/Home.vue") },
-    { path: "/about", component: () => import("@/pages/About.vue") },
 
     /* membership */
 
-    /* quicklink */
-
-    /* section: nested */
   ],
 });
 

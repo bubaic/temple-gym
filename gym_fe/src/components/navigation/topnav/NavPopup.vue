@@ -1,5 +1,5 @@
 <template>
-  <ul class="items" aria-label="submenu">
+  <ul id="submenu" class="items" aria-label="submenu">
     <li class="item" v-for="(item, idx) in items" :key="idx">
       <a href="#" class="item__link">
         <tg-icon
@@ -28,11 +28,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "@/assets/styles/keyframes";
   @import "@/assets/styles/reusable";
 
   .items {
-    @apply absolute right-0 w-44 p-2 mt-2 space-y-2 rounded-md shadow-md hidden
-    text-true-gray-600 bg-warm-gray-100 border border-true-gray-200;
+    @apply absolute top-10 right-0 p-2 space-y-2 rounded shadow-md hidden
+    text-true-gray-600 bg-warm-gray-100 border max-w-2xs;
   }
   .item {
     @apply flex;
@@ -48,11 +49,16 @@
       }
 
       .wrapper {
-        @apply inline-flex justify-between items-center w-full;
+        @extend %flexInline;
+        @apply justify-between w-full gap-2;
       }
     }
   }
   .alert {
     @apply text-red-600 bg-red-100;
+  }
+
+  #submenu {
+    animation: fadeIn 250ms ease;
   }
 </style>

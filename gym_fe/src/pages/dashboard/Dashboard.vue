@@ -30,6 +30,6 @@ export default {
 <style scoped>
 .dashboard {
   /* @apply flex flex-col w-full h-screen bg-brand; */
-  @apply w-full bg-brand overflow-hidden;
+  @apply w-full bg-brand;
 }
 </style>

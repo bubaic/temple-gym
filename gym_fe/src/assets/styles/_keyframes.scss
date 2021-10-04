@@ -58,3 +58,18 @@
     transform-origin: right 21px;
   }
 }
+
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
